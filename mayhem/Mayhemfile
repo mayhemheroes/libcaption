@@ -1,0 +1,10 @@
+project: libcaption
+target: ts2srt
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ts2srt/testsuite
+
+cmds:
+  - cmd: /mayhem/ts2srt
+    libfuzzer: true
